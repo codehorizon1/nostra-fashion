@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore Nostra collections — contemporary fashion, essentials and limited pieces."
+    >
+
+    <title>Nostra — Collections</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+                NOSTRA
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav
+                class="nav-links"
+                aria-label="Main navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a
+                    href="collections.html"
+                    class="active"
+                >
+                    Collections
+                </a>
+
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             COLLECTION HEADER
+             ================================================= -->
+
+        <section class="collections-header">
+
+            <div class="collections-header-inner">
+
+                <p class="collections-label">
+                    Nostra / Collections
+                </p>
+
+
+                <h1>
+                    Find what
+                    <span>
+                        feels like you.
+                    </span>
+                </h1>
+
+
+                <p class="collections-description">
+                    Explore contemporary silhouettes,
+                    everyday essentials and limited pieces.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             COLLECTION SHOP
+             ================================================= -->
+
+        <section class="collection-shop">
+
+
+            <!-- =================================================
+                 FILTER SIDEBAR
+                 ================================================= -->
+
+            <aside class="filters-sidebar">
+
+
+                <!-- FILTER HEADER -->
+
+                <div class="filters-heading">
+
+                    <span>
+                        Filters
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="clear-filters"
+                        id="clear-filters"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+
+                <!-- SEARCH -->
+
+                <div class="filter-search">
+
+                    <label for="product-search">
+                        Search
+                    </label>
+
+
+                    <div class="filter-search-box">
+
+                        <input
+                            type="search"
+                            id="product-search"
+                            placeholder="Search products..."
+                            autocomplete="off"
+                        >
+
+
+                        <span>
+                            /
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CATEGORY FILTERS
+                     ================================================= -->
+
+                <div class="filter-group">
+
+                    <div class="filter-group-header">
+
+                        <h3>
+                            Categories
+                        </h3>
+
+                    </div>
+
+
+                    <label class="filter-option">
+
+                        <input
+                            type="checkbox"
+                            class="category-filter"
+                            value="women"
+                        >
+
+                        <span>
+                            Women
+                        </span>
+
+                    </label>
+
+
+                    <label class="filter-option">
+
+                        <input
+                            type="checkbox"
+                            class="category-filter"
+                            value="men"
+                        >
+
+                        <span>
+                            Men
+                        </span>
+
+                    </label>
+
+
+                    <label class="filter-option">
+
+                        <input
+                            type="checkbox"
+                            class="category-filter"
+                            value="dresses"
+                        >
+
+                        <span>
+                            Dresses
+                        </span>
+
+                    </label>
+
+
+                    <label class="filter-option">
+
+                        <input
+                            type="checkbox"
+                            class="category-filter"
+                            value="shirts"
+                        >
+
+                        <span>
+                            Shirts
+                        </span>
+
+                    </label>
+
+
+                    <label class="filter-option">
+
+                        <input
+                            type="checkbox"
+                            class="category-filter"
+                            value="trousers"
+                        >
+
+                        <span>
+                            Trousers
+                        </span>
+
+                    </label>
+
+
+                    <label class="filter-option">
+
+                        <input
+                            type="checkbox"
+                            class="category-filter"
+                            value="essentials"
+                        >
+
+                        <span>
+                            Essentials
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     BRAND FILTERS
+                     ================================================= -->
+
+                <div class="filter-group">
+
+                    <div class="filter-group-header">
+
+                        <h3>
+                            Brand
+                        </h3>
+
+                    </div>
+
+
+                    <label class="filter-option">
+
+                        <input
+                            type="checkbox"
+                            class="brand-filter"
+                            value="nostra"
+                        >
+
+                        <span>
+                            Nostra
+                        </span>
+
+                    </label>
+
+
+                    <label class="filter-option">
+
+                        <input
+                            type="checkbox"
+                            class="brand-filter"
+                            value="edition"
+                        >
+
+                        <span>
+                            Nostra Edition
+                        </span>
+
+                    </label>
+
+
+                    <label class="filter-option">
+
+                        <input
+                            type="checkbox"
+                            class="brand-filter"
+                            value="atelier"
+                        >
+
+                        <span>
+                            Atelier
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PRICE FILTER
+                     ================================================= -->
+
+                <div class="filter-group price-filter-group">
+
+                    <div class="filter-group-header">
+
+                        <h3>
+                            Price
+                        </h3>
+
+                    </div>
+
+
+                    <input
+                        type="range"
+                        id="price-filter"
+                        min="999"
+                        max="5000"
+                        value="5000"
+                        step="100"
+                    >
+
+
+                    <div class="price-values">
+
+                        <span>
+                            ₹999
+                        </span>
+
+
+                        <span id="price-value">
+                            ₹5,000
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+
+            <!-- =================================================
+                 PRODUCT RESULTS
+                 ================================================= -->
+
+            <div class="collection-results">
+
+
+                <!-- RESULTS HEADER -->
+
+                <div class="collection-products-header">
+
+                    <p>
+
+                        <span id="product-count">
+                            12
+                        </span>
+
+                        Pieces
+
+                    </p>
+
+
+                    <p class="collection-sort">
+                        Latest
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PRODUCT GRID
+                     ================================================= -->
+
+                <div
+                    class="collection-grid"
+                    id="collection-grid"
+                >
+
+
+                    <!-- =================================================
+                         PRODUCT 01
+                         ================================================= -->
+
+                    <article
+                        class="collection-card"
+                        data-category="women dresses"
+                        data-brand="nostra"
+                        data-price="3499"
+                        data-name="Autumn Layer Coat"
+                    >
+
+                        <a href="#">
+
+                            <div class="collection-image">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1578632292335-df3abbb0d586?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Autumn Layer Coat"
+                                >
+
+                            </div>
+
+
+                            <div class="collection-card-info">
+
+                                <div>
+
+                                    <h2>
+                                        Autumn Layer Coat
+                                    </h2>
+
+                                    <p>
+                                        Women / Dresses
+                                    </p>
+
+                                </div>
+
+
+                                <span>
+                                    ₹3,499
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PRODUCT 02
+                         ================================================= -->
+
+                    <article
+                        class="collection-card"
+                        data-category="Men dresses"
+                        data-brand="edition"
+                        data-price="3899"
+                        data-name="Noir Oversized Sweatshirt"
+                    >
+
+                        <a href="#">
+
+                            <div class="collection-image">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1578681994506-b8f463449011?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Noir Oversized Sweatshirt"
+                                >
+
+                            </div>
+
+
+                            <div class="collection-card-info">
+
+                                <div>
+
+                                    <h2>
+                                        Noir Oversized Sweatshirt
+                                    </h2>
+
+                                    <p>
+                                        Men / Dresses
+                                    </p>
+
+                                </div>
+
+
+                                <span>
+                                    ₹3,899
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PRODUCT 03
+                         ================================================= -->
+
+                    <article
+                        class="collection-card"
+                        data-category="Men dresses"
+                        data-brand="edition"
+                        data-price="4099"
+                        data-name="Graffiti T-Shirt"
+                    >
+
+                        <a href="#">
+
+                            <div class="collection-image">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1589902860314-e910697dea18?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Graffiti T-Shirt"
+                                >
+
+                            </div>
+
+
+                            <div class="collection-card-info">
+
+                                <div>
+
+                                    <h2>
+                                        Graffiti T-Shit
+                                    </h2>
+
+                                    <p>
+                                        Men / Dresses
+                                    </p>
+
+                                </div>
+
+
+                                <span>
+                                    ₹4,099
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PRODUCT 04
+                         ================================================= -->
+
+                    <article
+                        class="collection-card"
+                        data-category="Women dresses"
+                        data-brand="atelier"
+                        data-price="4299"
+                        data-name="Nostra Floral Jumpsuit"
+                    >
+
+                        <a href="#">
+
+                            <div class="collection-image">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1768803968271-06b01687c53b?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Nostra Floral Jumpsuit"
+                                >
+
+                            </div>
+
+
+                            <div class="collection-card-info">
+
+                                <div>
+
+                                    <h2>
+                                        Nostra Floral Jumpsuit
+                                    </h2>
+
+                                    <p>
+                                        Women / Dresses
+                                    </p>
+
+                                </div>
+
+
+                                <span>
+                                    ₹4,299
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PRODUCT 05
+                         ================================================= -->
+
+                    <article
+                        class="collection-card"
+                        data-category="Men Shirts"
+                        data-brand="nostra"
+                        data-price="3199"
+                        data-name="Olive Stitch Denim Shirt"
+                    >
+
+                        <a href="#">
+
+                            <div class="collection-image">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1594587639557-2f5f22ea1616?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Olive Stitch Denim Shirt"
+                                >
+
+                            </div>
+
+
+                            <div class="collection-card-info">
+
+                                <div>
+
+                                    <h2>
+                                        Olive Stitch Denim Shirt
+                                    </h2>
+
+                                    <p>
+                                        Men / Dresses
+                                    </p>
+
+                                </div>
+
+
+                                <span>
+                                    ₹3,199
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PRODUCT 06
+                         ================================================= -->
+
+                    <article
+                        class="collection-card"
+                        data-category="Men Shirts"
+                        data-category="men Trousers"
+                        data-brand="edition"
+                        data-price="4399"
+                        data-name="Nostra Utility Co-ord"
+                    >
+
+                        <a href="#">
+
+                            <div class="collection-image">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1771919336237-4b11b12e0793?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Nostra Utility Co-ord"
+                                >
+
+                            </div>
+
+
+                            <div class="collection-card-info">
+
+                                <div>
+
+                                    <h2>
+                                        Nostra Utility Co-ord
+                                    </h2>
+
+                                    <p>
+                                        Men / Dresses
+                                    </p>
+
+                                </div>
+
+
+                                <span>
+                                    ₹4,399
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PRODUCT 07
+                         ================================================= -->
+
+                    <article
+                        class="collection-card"
+                        data-category="Men"
+                        data-brand="atelier"
+                        data-price="3699"
+                        data-name="Graffiti Jacket"
+                    >
+
+                        <a href="#">
+
+                            <div class="collection-image">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1783597873135-288064abc960?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Graffiti Jacket"
+                                >
+
+                            </div>
+
+
+                            <div class="collection-card-info">
+
+                                <div>
+
+                                    <h2>
+                                        Graffiti Jacket
+                                    </h2>
+
+                                    <p>
+                                        Men / Graffiti Jacket
+                                    </p>
+
+                                </div>
+
+
+                                <span>
+                                    ₹3,699
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PRODUCT 08
+                         ================================================= -->
+
+                    <article
+                        class="collection-card"
+                        data-category="Men"
+                        data-brand="nostra"
+                        data-price="3899"
+                        data-name="Emirates Jersey"
+                    >
+
+                        <a href="#">
+
+                            <div class="collection-image">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1577212017184-80cc0da11082?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Emirates Jersey"
+                                >
+
+                            </div>
+
+
+                            <div class="collection-card-info">
+
+                                <div>
+
+                                    <h2>
+                                        Emirates Jersey
+                                    </h2>
+
+                                    <p>
+                                        Men / Jersey
+                                    </p>
+
+                                </div>
+
+
+                                <span>
+                                    ₹3,899
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PRODUCT 09
+                         ================================================= -->
+
+                    <article
+                        class="collection-card"
+                        data-category="men Trousers"
+                        data-brand="nostra"
+                        data-price="1899"
+                        data-name="Cotton Pant"
+                    >
+
+                        <a href="#">
+
+                            <div class="collection-image">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Cotton Pant"
+                                >
+
+                            </div>
+
+
+                            <div class="collection-card-info">
+
+                                <div>
+
+                                    <h2>
+                                        Essential Pant
+                                    </h2>
+
+                                    <p>
+                                        Men /cotton Pant
+                                    </p>
+
+                                </div>
+
+
+                                <span>
+                                    ₹1,899
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PRODUCT 10
+                         ================================================= -->
+
+                    <article
+                        class="collection-card"
+                        data-category="men essentials"
+                        data-brand="atelier"
+                        data-price="2799"
+                        data-name="Relaxed Jacket"
+                    >
+
+                        <a href="#">
+
+                            <div class="collection-image">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Relaxed Jacket"
+                                >
+
+                            </div>
+
+
+                            <div class="collection-card-info">
+
+                                <div>
+
+                                    <h2>
+                                        Relaxed Jacket
+                                    </h2>
+
+                                    <p>
+                                        Men / Essentials
+                                    </p>
+
+                                </div>
+
+
+                                <span>
+                                    ₹2,799
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PRODUCT 11
+                         ================================================= -->
+
+                    <article
+                        class="collection-card"
+                        data-category="Women essentials"
+                        data-brand="nostra"
+                        data-price="2499"
+                        data-name="Form Overshirt"
+                    >
+
+                        <a href="#">
+
+                            <div class="collection-image">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Form Overshirt"
+                                >
+
+                            </div>
+
+
+                            <div class="collection-card-info">
+
+                                <div>
+
+                                    <h2>
+                                        Form Overshirt
+                                    </h2>
+
+                                    <p>
+                                        Women / Essentials
+                                    </p>
+
+                                </div>
+
+
+                                <span>
+                                    ₹2,499
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PRODUCT 12
+                         ================================================= -->
+
+                    <article
+                        class="collection-card"
+                        data-category="women essentials"
+                        data-brand="nostra"
+                        data-price="2199"
+                        data-name="Everyday Form"
+                    >
+
+                        <a href="#">
+
+                            <div class="collection-image">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Everyday Form"
+                                >
+
+                            </div>
+
+
+                            <div class="collection-card-info">
+
+                                <div>
+
+                                    <h2>
+                                        Everyday Form
+                                    </h2>
+
+                                    <p>
+                                        Women / Essentials
+                                    </p>
+
+                                </div>
+
+
+                                <span>
+                                    ₹2,199
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     NO RESULTS
+                     ================================================= -->
+
+                <div
+                    class="no-results"
+                    id="no-results"
+                >
+
+                    <h2>
+                        Nothing found.
+                    </h2>
+
+
+                    <p>
+                        Try adjusting your filters.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Nostra
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
