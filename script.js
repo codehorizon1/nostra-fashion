@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     initializeNavbar();
+    initializeMobileMenu();
     initializeHomeAnimations();
     initializeCollectionFilters();
 
@@ -69,6 +70,53 @@ function initializeHomeAnimations() {
 
     animatedElements.forEach((element) => {
         observer.observe(element);
+    });
+
+}
+
+function initializeMobileMenu() {
+
+    const navbar = document.querySelector(".navbar");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    if (!navbar || !menuToggle) return;
+
+    menuToggle.addEventListener("click", () => {
+
+        const isOpen = navbar.classList.toggle("menu-open");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close menu" : "Open menu"
+        );
+
+    });
+
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navbar.classList.remove("menu-open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open menu"
+            );
+
+        });
+
     });
 
 }
