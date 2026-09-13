@@ -1,7 +1,3 @@
-/* =========================================================
-   NOSTRA — JAVASCRIPT
-   ========================================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
     initializeNavbar();
@@ -10,11 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
-/* =========================================================
-   NAVBAR
-   ========================================================= */
-
 function initializeNavbar() {
 
     const navbar = document.querySelector(".navbar");
@@ -22,7 +13,6 @@ function initializeNavbar() {
     if (!navbar) {
         return;
     }
-
 
     function updateNavbar() {
 
@@ -34,10 +24,7 @@ function initializeNavbar() {
 
     }
 
-
     updateNavbar();
-
-
     window.addEventListener(
         "scroll",
         updateNavbar,
@@ -48,11 +35,6 @@ function initializeNavbar() {
 
 }
 
-
-/* =========================================================
-   HOME ANIMATIONS
-   ========================================================= */
-
 function initializeHomeAnimations() {
 
     const animatedElements =
@@ -60,32 +42,23 @@ function initializeHomeAnimations() {
             ".product-card"
         );
 
-
     if (!animatedElements.length) {
         return;
     }
 
-
     const observer =
         new IntersectionObserver(
             (entries, observer) => {
-
                 entries.forEach((entry) => {
-
                     if (entry.isIntersecting) {
-
                         entry.target.classList.add(
                             "visible"
                         );
-
                         observer.unobserve(
                             entry.target
                         );
-
                     }
-
                 });
-
             },
             {
                 threshold: 0.12,
@@ -94,118 +67,72 @@ function initializeHomeAnimations() {
             }
         );
 
-
     animatedElements.forEach((element) => {
-
         observer.observe(element);
-
     });
 
 }
 
-
-/* =========================================================
-   COLLECTION FILTER SYSTEM
-   ========================================================= */
-
 function initializeCollectionFilters() {
-
     const collectionGrid =
         document.querySelector(
             "#collection-grid"
         );
-
-
     if (!collectionGrid) {
         return;
     }
-
-
     const products =
         Array.from(
             collectionGrid.querySelectorAll(
                 ".collection-card"
             )
         );
-
-
     const searchInput =
         document.querySelector(
             "#product-search"
         );
-
-
     const categoryInputs =
         document.querySelectorAll(
             ".category-filter"
         );
-
-
     const brandInputs =
         document.querySelectorAll(
             ".brand-filter"
         );
-
-
     const priceInput =
         document.querySelector(
             "#price-filter"
         );
-
-
     const priceValue =
         document.querySelector(
             "#price-value"
         );
-
-
     const productCount =
         document.querySelector(
             "#product-count"
         );
-
-
     const noResults =
         document.querySelector(
             "#no-results"
         );
-
-
     const clearButton =
         document.querySelector(
             "#clear-filters"
         );
-
-
     if (!products.length) {
         return;
     }
-
-
-    /* =====================================================
-       URL PARAMETERS
-       ===================================================== */
 
     const urlParams =
         new URLSearchParams(
             window.location.search
         );
-
-
     const urlCategory =
         urlParams.get("category");
-
-
     const urlCollection =
         urlParams.get("collection");
 
-
-    /* =====================================================
-       HELPER FUNCTIONS
-       ===================================================== */
-
     function getTokens(value) {
-
         return value
             .toLowerCase()
             .trim()
@@ -213,38 +140,23 @@ function initializeCollectionFilters() {
             .filter(Boolean);
 
     }
-
-
     function getProductCategories(product) {
-
         return getTokens(
             product.dataset.category || ""
         );
-
     }
-
-
     function hasCategory(
         product,
         selectedCategory
     ) {
-
         const categories =
             getProductCategories(product);
-
         return categories.includes(
             selectedCategory.toLowerCase()
         );
-
     }
 
-
-    /* =====================================================
-       FILTER PRODUCTS
-       ===================================================== */
-
     function applyFilters() {
-
         const searchTerm =
             searchInput
                 ? searchInput.value
@@ -321,24 +233,11 @@ function initializeCollectionFilters() {
                     0
                 );
 
-
-            /* -----------------------------------------
-               SEARCH
-               ----------------------------------------- */
-
             const matchesSearch =
                 !searchTerm ||
                 name.includes(searchTerm) ||
                 categoryText.includes(searchTerm) ||
                 brand.includes(searchTerm);
-
-
-            /* -----------------------------------------
-               CATEGORY
-               IMPORTANT:
-               Exact token matching prevents
-               "men" matching "women".
-               ----------------------------------------- */
 
             const matchesCategory =
                 selectedCategories.length === 0 ||
@@ -350,29 +249,14 @@ function initializeCollectionFilters() {
                         )
                 );
 
-
-            /* -----------------------------------------
-               BRAND
-               ----------------------------------------- */
-
             const matchesBrand =
                 selectedBrands.length === 0 ||
                 selectedBrands.includes(
                     brand
                 );
 
-
-            /* -----------------------------------------
-               PRICE
-               ----------------------------------------- */
-
             const matchesPrice =
                 price <= maximumPrice;
-
-
-            /* -----------------------------------------
-               URL CATEGORY
-               ----------------------------------------- */
 
             const matchesUrlCategory =
                 !urlCategory ||
@@ -381,14 +265,7 @@ function initializeCollectionFilters() {
                     urlCategory
                 );
 
-
-            /* -----------------------------------------
-               URL COLLECTION
-               ----------------------------------------- */
-
             let matchesUrlCollection = true;
-
-
             if (urlCollection === "new") {
 
                 const productIndex =
@@ -399,14 +276,12 @@ function initializeCollectionFilters() {
 
             }
 
-
             if (urlCollection === "limited") {
 
                 matchesUrlCollection =
                     brand === "edition";
 
             }
-
 
             if (urlCollection === "wanted") {
 
@@ -418,7 +293,6 @@ function initializeCollectionFilters() {
 
             }
 
-
             if (urlCollection === "essentials") {
 
                 matchesUrlCollection =
@@ -429,11 +303,6 @@ function initializeCollectionFilters() {
 
             }
 
-
-            /* -----------------------------------------
-               FINAL RESULT
-               ----------------------------------------- */
-
             const shouldShow =
                 matchesSearch &&
                 matchesCategory &&
@@ -441,7 +310,6 @@ function initializeCollectionFilters() {
                 matchesPrice &&
                 matchesUrlCategory &&
                 matchesUrlCollection;
-
 
             if (shouldShow) {
 
@@ -461,11 +329,6 @@ function initializeCollectionFilters() {
 
         });
 
-
-        /* =================================================
-           PRODUCT COUNT
-           ================================================= */
-
         if (productCount) {
 
             productCount.textContent =
@@ -474,11 +337,6 @@ function initializeCollectionFilters() {
                 ).padStart(2, "0");
 
         }
-
-
-        /* =================================================
-           NO RESULTS
-           ================================================= */
 
         if (noResults) {
 
@@ -500,11 +358,6 @@ function initializeCollectionFilters() {
 
     }
 
-
-    /* =====================================================
-       SEARCH EVENT
-       ===================================================== */
-
     if (searchInput) {
 
         searchInput.addEventListener(
@@ -513,11 +366,6 @@ function initializeCollectionFilters() {
         );
 
     }
-
-
-    /* =====================================================
-       CATEGORY EVENTS
-       ===================================================== */
 
     categoryInputs.forEach(
         (input) => {
@@ -530,11 +378,6 @@ function initializeCollectionFilters() {
         }
     );
 
-
-    /* =====================================================
-       BRAND EVENTS
-       ===================================================== */
-
     brandInputs.forEach(
         (input) => {
 
@@ -545,11 +388,6 @@ function initializeCollectionFilters() {
 
         }
     );
-
-
-    /* =====================================================
-       PRICE EVENT
-       ===================================================== */
 
     if (priceInput) {
 
@@ -570,18 +408,12 @@ function initializeCollectionFilters() {
 
                 }
 
-
                 applyFilters();
 
             }
         );
 
     }
-
-
-    /* =====================================================
-       CLEAR FILTERS
-       ===================================================== */
 
     if (clearButton) {
 
@@ -636,11 +468,6 @@ function initializeCollectionFilters() {
         );
 
     }
-
-
-    /* =====================================================
-       INITIAL FILTER
-       ===================================================== */
 
     applyFilters();
 
